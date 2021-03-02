@@ -1,12 +1,17 @@
-bill = float(input("Enter total bill: " ))
-tip = int(input("What percentage tip would you like to give? 10,12 or 15? "))
-persons = int(input("How many people to split the bill? "))
-tip1 = bill *tip /100
-total_with_tip = bill+tip1
-person = total_with_tip/persons
-final_bill = round(person,2)
-final_bill = "{:.2f}".format(person)
-print("Each person should pay : $",final_bill)
+year = int(input("Enter the year: " ))
+
+if year % 4 ==0:
+  if year % 100 == 0:
+    if year % 400 == 0:
+      print(f"{year},is a leap year")
+    else:
+      print(f"{year},is not a leap year")
+  else:
+    print(f"{year},is a leap year")
+else:
+  print(f"{year},is not a leap year")
+    
+
 
 
 
