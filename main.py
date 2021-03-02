@@ -1,26 +1,34 @@
-height = float(input("Enter your Height :"))
-bill = 0
-
-if height > 120:
-  age = int(input("Enter your Age: " ))
-
-  if age <= 12:
-    print("ticket is $5")
-    bill +=5
-  elif age >12 and age <=18:
-    print("ticket is $7")
-    bill +=7
-  else:
-    print("ticker is $12")
-    bill +=12
-
-  photo = input("You want a photo? ")
-  if photo == "y" or photo == "Y":
-    bill +=3
-  print(f"Total bill is ${bill}")
-
+pizza = input("What is the pizza size 'l'for Larg, 'm'for mediam, 's'for small : ")
+total = 0
+if pizza == "s":
+  print("Pizza is $15 ")
+  total +=15
+  pepperoni = input("Do you want add extra pepperoni? , 'y' for Yes ")
+  if pepperoni == "y":
+    total += 2
+    print("Extra Pepperoni is $2 ")
 else:
-  print("Sorry, Your are not eligible for the rollercost.")
+  if pizza == "l":
+    print("Pizza is $25 ")
+    total += 25
+  else:
+    print("pizza is $ 20 ")
+    total +=20
+  pepperoni = input("Do you want add extra pepperoni? , 'y' for Yes ")
+  if pepperoni == "y":
+    print("Extra Pepperoni is $3 ")
+    total += 3
+  
+cheese = input("Extra cheese $1, Do you want 'y'")
+if cheese == "y":
+  total += 1
+  print("Extra Cheese is $1 ")
+  print(f"Total bill is : ${total}")
+else:
+  print(f"Total bill is : ${total}")
+
+
+
 
 
     
