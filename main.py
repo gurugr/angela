@@ -1,15 +1,28 @@
-year = int(input("Enter the year: " ))
+height = float(input("Enter your Height :"))
+bill = 0
 
-if year % 4 ==0:
-  if year % 100 == 0:
-    if year % 400 == 0:
-      print(f"{year},is a leap year")
-    else:
-      print(f"{year},is not a leap year")
+if height > 120:
+  age = int(input("Enter your Age: " ))
+
+  if age <= 12:
+    print("ticket is $5")
+    bill +=5
+  elif age >12 and age <=18:
+    print("ticket is $7")
+    bill +=7
   else:
-    print(f"{year},is a leap year")
+    print("ticker is $12")
+    bill +=12
+
+  photo = input("You want a photo? ")
+  if photo == "y" or photo == "Y":
+    bill +=3
+  print(f"Total bill is ${bill}")
+
 else:
-  print(f"{year},is not a leap year")
+  print("Sorry, Your are not eligible for the rollercost.")
+
+
     
 
 
