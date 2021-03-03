@@ -1,31 +1,40 @@
-pizza = input("What is the pizza size 'l'for Larg, 'm'for mediam, 's'for small : ")
-total = 0
-if pizza == "s":
-  print("Pizza is $15 ")
-  total +=15
-  pepperoni = input("Do you want add extra pepperoni? , 'y' for Yes ")
-  if pepperoni == "y":
-    total += 2
-    print("Extra Pepperoni is $2 ")
-else:
-  if pizza == "l":
-    print("Pizza is $25 ")
-    total += 25
+print("Welcome to Treasure Island.\nYour mission is to find the treasure.")
+
+direction1 = input("Turn left or right? \n").lower()
+if direction1 == "right":
+  direction2 = input("swim or wait ? \n").lower()
+  if direction2 == "wait":
+    direction3 = input("door color is blue,red or yellow ? \n").lower()
+    if direction3 == "yellow":
+      print("Congratulation!. You Won!")
+      print('''
+      *******************************************************************************
+                |                   |                  |                     |
+      _________|________________.=""_;=.______________|_____________________|_______
+      |                   |  ,-"_,=""     `"=.|                  |
+      |___________________|__"=._o`"-._        `"=.______________|___________________
+                |                `"=._o`"=._      _`"=._                     |
+      _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+      |                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+      |___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+                |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+      _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+      |                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+      |___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+      ____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+      /______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+      ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+      /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+      ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+      /______/______/______/______/______/______/______/______/______/______/[TomekK]
+      *******************************************************************************
+      ''')
+    else:
+      print("Game Over !")
   else:
-    print("pizza is $ 20 ")
-    total +=20
-  pepperoni = input("Do you want add extra pepperoni? , 'y' for Yes ")
-  if pepperoni == "y":
-    print("Extra Pepperoni is $3 ")
-    total += 3
-  
-cheese = input("Extra cheese $1, Do you want 'y'")
-if cheese == "y":
-  total += 1
-  print("Extra Cheese is $1 ")
-  print(f"Total bill is : ${total}")
+    print("Game Over !")
 else:
-  print(f"Total bill is : ${total}")
+  print("Game Over !")
 
 
 
