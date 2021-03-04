@@ -31,16 +31,19 @@ for x in range(1,letters+1):
   password.append(random.choice(a))
 
 for x in range(1,numbers+1):
-  password.append(random.choice(b))
+  password += random.choice(b)
 
 for x in range(1,symbols + 1):
-  password.append(random.choice(c))
+  password += random.choice(c)
 
 # Random Password generator
-
+print(password)
+password_string = ""
 random.shuffle(password)
 for x in password:
-  print(x,end="")
+  password_string += x
+
+print(f"Your password is :\n {password_string}")
 
 
 # total_digits = (letters + numbers + symbols)
