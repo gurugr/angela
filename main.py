@@ -1,46 +1,33 @@
-print("Welcome to Treasure Island.\nYour mission is to find the treasure.")
+heights = input("Enter students height :\n").split(" ")
 
-direction1 = input("Turn left or right? \n").lower()
-if direction1 == "right":
-  direction2 = input("swim or wait ? \n").lower()
-  if direction2 == "wait":
-    direction3 = input("door color is blue,red or yellow ? \n").lower()
-    if direction3 == "yellow":
-      print("Congratulation!. You Won!")
-      print('''
-      *******************************************************************************
-                |                   |                  |                     |
-      _________|________________.=""_;=.______________|_____________________|_______
-      |                   |  ,-"_,=""     `"=.|                  |
-      |___________________|__"=._o`"-._        `"=.______________|___________________
-                |                `"=._o`"=._      _`"=._                     |
-      _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
-      |                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
-      |___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
-                |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
-      _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
-      |                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
-      |___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
-      ____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
-      /______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
-      ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
-      /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
-      ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
-      /______/______/______/______/______/______/______/______/______/______/[TomekK]
-      *******************************************************************************
-      ''')
-    else:
-      print("Game Over !")
-  else:
-    print("Game Over !")
-else:
-  print("Game Over !")
+for x in range(0,len(heights)):
+  heights[x] = int(heights[x])
+
+
+height_list = []
+for height in heights:
+  height_list.append(int(height))
+
+
+print("Value List :",height_list)
+total_height = 0
+for max_val in height_list:
+  total_height += max_val
+
+print("total Height is : ",total_height)
+
+total_student = 0
+for student in range(0,len(height_list)):
+  total_student += 1
+
+print("Total Students :",total_student)
+
+average = total_height/total_student
+print("Total Round Avg :",round(average))
+print("Total Avg :","%.2f" %average)
 
 
 
-
-
-    
 
 
 
