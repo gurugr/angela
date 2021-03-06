@@ -1,101 +1,118 @@
-# marks = input("Enter all the Marks of the students :\n").split(" ")
-# for mark in range(0,len(marks)):
-#   marks[mark] = int(marks[mark])
-
-# print("Students marks ",marks)
-
-# highest_score = 0
-# for mark in marks:
-#   if mark > highest_score:
-#     highest_score = mark
-
-# print(highest_score)
 import random
 
-a =['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+stages = ['''
+      _______
+     |/    |
+     |    (_)
+     |    \|/
+     |     |
+     |    / \
+     |
+ jgs_|___''',
+ '''   _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
+     |      / 
+     |
+ jgs_|___''','''
+       _______
+     |/      |
+     |      (_)
+     |      \|/
+     |       |
 
+ jgs_|___''','''   
+      _______
+     |/      |
+     |      (_)
+     |      \|/
+     |
+ jgs_|___''','''
+       _______
+     |/      |
+     |      (_)
+     |       |
+     |
+ jgs_|___''','''
+      _______
+     |/      |
+     |      (_)
+     |
+ jgs_|___''',''' 
+      _______
+     |/      |
+     |      
 
-b = ['1','2','3','4','5','6','7','8','9','0']
+     |
+ jgs_|___''',]
 
-c = ['!','@','#','$','%','^','&','*','(',')']
+words = ["pencil","book","computer"]
 
-letters = int(input("How many letters do you want to add :\n"))
-numbers = int(input("How many numbers do you want to add :\n"))
-symbols = int(input("How many symbols do you want to add :\n"))
+rand_word = random.choice(words).lower()
 
-password_caractors = (letters+numbers+symbols)
-
-password = []
-
-for x in range(1,letters+1):
-  password.append(random.choice(a))
-
-for x in range(1,numbers+1):
-  password += random.choice(b)
-
-for x in range(1,symbols + 1):
-  password += random.choice(c)
-
-# Random Password generator
-print(password)
-password_string = ""
-random.shuffle(password)
-for x in password:
-  password_string += x
-
-print(f"Your password is :\n {password_string}")
-
-
-# total_digits = (letters + numbers + symbols)
-
-# password = []
-# for x in random.sample(a,letters):
-#   password.append(x)
-# for x in random.sample(b,numbers):
-#   password.append(x)
-# for x in random.sample(c,symbols):
-#   password.append(x)
-
-# for p in random.sample(password,total_digits):
-#   print(p,end="")
-
-
-
-
-
-
-
-
-
-
-
-
+display = []
+len_word = len(rand_word)
+for word in range(len_word):
+  display.append("_")
 
 
 
+print(display)
+print(rand_word)
+guess_time = 0
+success_word_count = 0
+
+
+counter = False
+while not counter:
+  guess_word = input("Enter a tetter : \n")
+  guess_time +=1
+  for letter in range(len_word):
+    position = rand_word[letter]
+    if position == guess_word:
+      display[letter] = position
+      success_word_count +=1
+  print(display)
+
+  # print("guess_time :",guess_time)
+  # print("success_word_count :",success_word_count)
+  stages_tracking = (success_word_count - guess_time)
+  # print("stages_tracking :",stages_tracking)
+
+  if not stages_tracking == -8:
+    current_stages = stages[stages_tracking]
+    print(current_stages)
+  else:
+    print("You Dead ")
+    counter = True
   
 
+  if "_" not in display:
+    print("You Won!")
+    counter = True
 
 
 
 
 
+# counter = 0
+# while counter < len_word:
+#   guess_word = input("Enter a tetter : \n")
+#   for letter in range(len_word):
+#     position = rand_word[letter]
+#     if position == guess_word:
+#       display[letter] = position
+#       counter +=1
+#   print(display)
+
+
+# print("You Won!")
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
 
